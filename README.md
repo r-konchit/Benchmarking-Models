@@ -1,4 +1,17 @@
-# Linear Classifiers Documentation
+# Linear Classifiers
+
+## Overview
+
+This repository benchmarks linear classification models implemented from scratch,
+including Perceptron and Logistic Regression, across multiple text classification tasks.
+
+The models are evaluated on:
+- Language identification (English vs Dutch)
+- Spam detection
+- Universal Declaration of Human Rights text classification
+
+The goal is to understand how linear models behave across different datasets,
+feature representations, and training without prebuilt ML libraries.
 
 ## countLetters(words):
 This returns an array of length 26 which is counting the occurrences of each letter from a to z in the input string.  

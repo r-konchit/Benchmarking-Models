@@ -1,17 +1,32 @@
-# Linear Classifiers
+# Benchmarking Linear Classification Models
 
 ## Overview
+This repository benchmarks linear classification models implemented from scratch
+and evaluates their performance across multiple text classification tasks.
 
-This repository benchmarks linear classification models implemented from scratch,
-including Perceptron and Logistic Regression, across multiple text classification tasks.
+The goal is to understand how classic linear models behave under different datasets,
+feature representations, and training without using prebuilt ML libraries.
 
-The models are evaluated on:
-- Language identification (English vs Dutch)
-- Spam detection
-- Universal Declaration of Human Rights text classification
+## Models Implemented
+- Perceptron
+- Logistic Regression
+- Linear classifiers using bag-of-letters features
 
-The goal is to understand how linear models behave across different datasets,
-feature representations, and training without prebuilt ML libraries.
+## Tasks & Datasets
+- **Language Identification** (English vs Dutch)
+- **Spam Detection**
+- **Universal Declaration of Human Rights** text classification
+
+Each task shows how feature engineering and optimization choices impact
+classification performance.
+
+## How to Run
+Each task directory contains a Jupyter notebook demonstrating:
+- Data preprocessing and feature extraction
+- Model training
+- Evaluation and comparison
+
+Open a notebook and run all cells to reproduce results.
 
 ## countLetters(words):
 This returns an array of length 26 which is counting the occurrences of each letter from a to z in the input string.  
@@ -44,7 +59,6 @@ Returns 1 if the activation is positive or-1 if negative, and 0 if zero.
 Just loops through all test samples, then classifies them, and and then counts how many predictions 
 are correct. Returns the accuracy as number of correct predictions divided by the total test samples
 
-
 ### Functions used from the Scikit learn:
 
 ### StandardScaler()
@@ -69,7 +83,6 @@ Basically applies the same scaling from the training data to the test set X_test
 ### classifier.fit(X_train_fitted, y)
 Trains the logistic regression model using the scaled training data from X_train_fitted and labels the y.
 
-
 ### train_test_split(X, y, test_size=0.1, random_state=42)
 
 X: input data
@@ -78,7 +91,6 @@ y: Label which is the target
 test_size=0.1: 90% of the data goes into the test set, and the other 10 into training
 
 random_state=42: Sets the random seed for so its the same split each time
-
 
 ### precision_recall_fscore_support(y_test, y_pred, labels)
 returns
